@@ -1,4 +1,6 @@
 RailsAdmin.config do |config|
+  config.excluded_models = ["ActiveStorage::Blob", "ActiveStorage::Attachment"]
+
   config.main_app_name = Proc.new { |controller| [ "Rails Admin Demo", controller.params[:action].try(:titleize) ] }
   config.parent_controller = '::RailsAdminController'
 
